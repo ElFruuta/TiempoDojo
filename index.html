@@ -1,84 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div>
-        <div class="arriba">
-            <h1>DojoWeather</h1>
-            <ul class="list-arriba">
-                <li onclick="mostrarAlert()">
-                    <h2>Burbanck</h2>
-                </li>
-                <li onclick="mostrarAlert()">
-                    <h2>Chicago</h2>
-                </li>
-                <li onclick="mostrarAlert()">
-                    <h2>Dallas</h2>
-                </li>
+      <div class="arriba">
+        <h1>DojoWeather</h1>
+        <ul class="list-arriba">
+          <li onclick="mostrarAlert()">
+            <h2>Burbanck</h2>
+          </li>
+          <li onclick="mostrarAlert()">
+            <h2>Chicago</h2>
+          </li>
+          <li onclick="mostrarAlert()">
+            <h2>Dallas</h2>
+          </li>
+        </ul>
+      </div>
+      <div class="centro">
+        <div class="arriba-abajo">
+          <h2>San Jose</h2>
+          <p>Show temperature in</p>
+          <select name="escala" onchange="grado(this)">
+            <option value="°F">°F</option>
+            <option value="°C">°C</option>
+          </select>
+        </div>
+        <div>
+          <ul class="temperatures">
+            <li class="temperature">
+              <h3>Today</h3>
+              <img class="img" src="assets/some_rain.png" alt="" />
+              <p><b>some</b><span class="p">rain</span></p>
+              <samp class="grados">
+                <h3 class="rojo" id="temp1">75</h3>
+                <h3 class="azul" id="temp2">65</h3>
+              </samp>
+            </li>
+            <li class="temperature">
+              <h3>Tomorrow</h3>
+              <img class="img" src="assets/some_sun.png" alt="" />
+              <p><b>some</b><span class="p">sun</span></p>
+              <samp class="grados">
+                <h3 class="rojo" id="temp3">75</h3>
+                <h3 class="azul" id="temp4">65</h3>
+              </samp>
+            </li>
+            <li class="temperature">
+              <h3>Friday</h3>
+              <img class="img" src="assets/some_clouds.png" alt="" />
+              <p><b>some</b><span class="p">clouds</span></p>
+              <samp class="grados">
+                <h3 class="rojo" id="temp5">75</h3>
+                <h3 class="azul" id="temp6">65</h3>
+              </samp>
+            </li>
+            <li class="temperature">
+              <h3>Saturday</h3>
+              <img class="img" src="assets/some_sun.png" alt="" />
+              <p><b>some</b><span class="p">rain</span></p>
+              <samp class="grados">
+                <h3 class="rojo" id="temp7">75</h3>
+                <h3 class="azul" id="temp8">65</h3>
+              </samp>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <div class="cookies">
+            <ul class="cookie">
+              <li><img src="assets/cookie.png" alt="" /></li>
+              <li class="cookie1">
+                <h3><b>Stop! Cookie time</b></h3>
+                We use cookies (sadly not the edible ones) to personalize
+                content and ads, to provide social media and to analyse our
+                traffic. <a href="">Read more....</a>
+              </li>
+              <li id="cookie3">
+                <button id="aa" class="btn" onclick="aceptar()">
+                  <p><b>I Accept</b></p>
+                </button>
+              </li>
             </ul>
+          </div>
         </div>
-        <div class="centro">
-            <div class="arriba-abajo">
-                <h2>San Jose</h2>
-                <p>Show temperature in <label><select name="escala" onchange="grado(this)">
-                            <option value="value1">°F</option>
-                            <option value="value2">°C</option>
-                        </select></label></p>
-            </div>
-            <div>
-                <ul class="temperatures">
-                    <li class="temperature">
-                        <h3>Today</h3><img class="img" src="assets/some_rain.png" alt="">
-                        <p><b>some</b><span class="p">rain</span></p><samp class="grados">
-                            <h3 class="rojo" id="temp1">75°</h3>
-                            <h3 class="azul" id="temp2">65°</h3>
-                        </samp>
-                    </li>
-                    <li class="temperature">
-                        <h3>Tomorrow</h3><img class="img" src="assets/some_sun.png" alt="">
-                        <p><b>some</b><span class="p">sun</span></p><samp class="grados">
-                            <h3 class="rojo" id="temp3">75°</h3>
-                            <h3 class="azul" id="temp4">65°</h3>
-                        </samp>
-                    </li>
-                    <li class="temperature">
-                        <h3>Friday</h3><img class="img" src="assets/some_clouds.png" alt="">
-                        <p><b>some</b><span class="p">clouds</span></p><samp class="grados">
-                            <h3 class="rojo" id="temp5">75°</h3>
-                            <h3 class="azul" id="temp6">65°</h3>
-                        </samp>
-                    </li>
-                    <li class="temperature">
-                        <h3>Saturday</h3><img class="img" src="assets/some_sun.png" alt="">
-                        <p><b>some</b><span class="p">rain</span></p><samp class="grados">
-                            <h3 class="rojo" id="temp7">75°</h3>
-                            <h3 class="azul" id="temp8">65°</h3>
-                        </samp>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer">
-            <div class="cookies">
-                <ul class="cookie">
-                    <li><img src="assets/cookie.png" alt=""></li>
-                    <li class="cookie1"><h3><b>Stop! Cookie time</b></h3>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media
-                        and to analyse our traffic. <a href="">Read more....</a></li>
-                    <li id="cookie3"><button id="aa" class="btn" onclick="aceptar()"><p><b>I Accept</b></p></button></li>
-                </ul>
-            </div>
-            </div>
-
-
-        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
