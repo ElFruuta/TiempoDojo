@@ -80,6 +80,8 @@ ul {
     display: flex;
     margin-top: 1vw;
     box-sizing: border-box;
+    position: fixed;
+    width: 82%;
 }
 .cookie {
     display: flex;
